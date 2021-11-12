@@ -1,0 +1,190 @@
+/* fv */
+.fv {
+  position: relative;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60vh;
+}
+.fv_img_list {
+  padding: 0;
+  margin: 0;
+}
+.fv_img {
+  display: block;
+  width: 100%;
+  filter: brightness(80%);
+  object-fit: cover;
+  height: 60vh;
+}
+.fv_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.fv_text {
+  color: #fff;
+}
+.fv_text_ja {
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+.fv_text_en {
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+.fv_phone {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  text-align: center;
+  background: linear-gradient(to right, $darkGreen, $darkGreen 95%, $darkGreen2 95%);
+  height: 24px;
+  width: 180px;
+  text-align: center;
+  border-radius: 10px;
+}
+.phone_icon {
+  line-height: 24px;
+  font-size: 1.6rem;
+  margin-right: 8px;
+
+}
+.phone_box {
+  display: inline-block;
+  line-height: 24px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.scroll_down {
+  display: none;
+}
+/* fvここまで */
+
+/* fv 600 */
+@media screen and (min-width: 600px) {
+  .fv {
+    height: 100vh;
+  }
+  .fv_img {
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+  }
+  .fv_text_ja {
+    font-size: 2.8rem;
+  }
+  .fv_text_en {
+    font-size: 3.2rem;
+  }
+  .fv_phone {
+    left: 5vw;
+    transform: translateX(0);
+    height: 36px;
+    width: 200px;
+  }
+  .phone_icon {
+    line-height: 36px;
+    font-size: 2rem;
+  }
+  .phone_box {
+    font-size: 1.8rem;
+  }
+
+  /* スクロールダウン */
+  .scroll_down {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    bottom: 10px;
+    left: 50%;
+    animation: mousemove 1.5s ease-in-out infinite;
+  }
+  @keyframes mousemove {
+    0% {bottom: 10px}
+    50% {bottom: 5px}
+    100% {bottom: 10px}
+  }
+  .scroll_down::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    width: 25px;
+    height: 37px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+  }
+  .scroll_down::after {
+    content: '';
+    position: absolute;
+    bottom: 26px;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+  }
+  .scroll_text {
+    position: absolute;
+    left: -15px;
+    bottom: 45px;
+    color: #fff;
+    font-size: 1.6rem;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 18px;
+      width: 1px;
+      height: 15px;
+      background-color: #fff;
+      animation: mousepathmove 1.4s linear infinite;
+      opacity: 0;
+    }
+  }
+  @keyframes mousepathmove {
+    0% {
+      height: 0;
+      top: 10px;
+      opacity: 0;
+    }
+    50% {
+      height: 15px;
+      opacity: 1;
+    }
+    100% {
+      height: 0;
+      top: 30px;
+      opacity: 0;
+    }
+  }
+  /* スクロールダウンここまで */
+}
+/* fv 600ここまで */
+
+/* fv 1024 */
+@media screen and (min-width: 1024px) {
+  .fv_text_ja {
+    font-size: 3.6rem;
+  }
+  .fv_text_en {
+    font-size: 4rem;
+  }
+  .fv_phone {
+    height: 48px;
+    width: 250px;
+  }
+  .phone_icon {
+    font-size: 2.6rem;
+    line-height: 48px;
+  }
+  .phone_box {
+    font-size: 2.2rem;
+  }
+}
+/* fv 1024ここまで */
