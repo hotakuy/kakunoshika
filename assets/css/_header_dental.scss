@@ -1,0 +1,167 @@
+/* header */
+header {
+  position: fixed;
+  z-index: 50;
+  width: 100vw;
+  transition: .8s;
+}
+.header-back {
+  background-color: rgba(231, 223, 168, .8);
+  transition: .8s;
+}
+.header_logo_box {
+  width: 160px;
+  margin-left: 5vw;
+}
+.header_logo {
+  width: 100%;
+}
+.header_nav_container {
+  display: none;
+  position: fixed;
+  z-index: 80;
+  right: 0;
+  top: 0;
+  width: 50vw;
+  height: 100vh;
+  background-color: rgba(200, 200, 200, .8);
+}
+.nav_list {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.nav_item {
+  width: 100%;
+  a {
+    color: #fff;
+    font-size: 1.6rem;
+    transition: .6s;
+    &:hover {
+      color: pink;
+      text-decoration: underline;
+      transition: .6s;
+    }
+  }
+  i {
+    font-size: 29px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 28px;
+  }
+}
+.fb_icon {
+  margin-right: 15px;
+}
+
+/* ハンバーガーボタン */
+.burger-btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 10px;
+  right: 5vw;
+  z-index: 100;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+.bar {
+  display: block;
+  background-color: #fff;
+  height: 2px;
+  width: 24px;
+  border-radius: 1px;
+}
+.bar-top {
+  transform: translateY(-6px);
+  transition: transform .3s;
+}
+.bar-bottom {
+  transform: translateY(6px);
+  transition: transfo
+}
+/* close */
+.bar.cross.bar-top {
+  transform: translateY(2px)rotate(45deg);
+  transition: transform .3s;
+}
+.bar.cross.bar-mid {
+  opacity: 0;
+  transition: opacity .3s;
+}
+.bar.cross.bar-bottom {
+  transform: translateY(-2px)rotate(-45deg);
+  transition: transform .3s;
+}
+/* ハンバーガーここまで */
+
+/* headerここまで */
+
+/* header 600 */
+@media screen and (min-width: 600px) {
+  .header_logo_box {
+    width: 200px;
+  }
+  .nav_item {
+    a {
+      font-size: 1.8rem;
+    }
+  }
+
+  .burger-btn {
+    top: 16px;
+  }
+  .bar {
+    width: 32px;
+  }
+}
+/* header 600ここまで */
+
+/* header 1024 */
+@media screen and (min-width: 1024px) {
+  .header_logo_box {
+    width: 200px;
+  }
+}
+/* header 1024ここまで */
+
+/* header 1200 */
+@media screen and (min-width: 1200px) {
+  .header_logo_box {
+    width: 240px;
+    margin-left: 2vw;
+  }
+  .header_nav_container {
+    display: block;
+    background-color: transparent;
+    height: auto;
+    width: 70vw;
+
+  }
+  .nav_list {
+    top: 20px;
+    left: 0;
+    right: 5vw;
+    transform: translate(0, 0);
+    text-align: right;
+    width: 100%;
+  }
+  .nav_item {
+    width: auto;
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 28px;
+    }
+    &:last-child {
+      margin-right: 2vw;
+    }
+  }
+  .burger-btn {
+    display: none;
+  }
+}
+/* header 1200ここまで */

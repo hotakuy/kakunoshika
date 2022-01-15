@@ -1,0 +1,57 @@
+/* contact */
+.contact {
+  background: url(../img/seat1.jpg);
+  height: 300px;
+  background-size: cover;
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+.contact_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  border: 2px solid #fff;
+  text-align: center;
+  color: #fff;
+  padding: 2rem 2rem 3.5rem;
+  width: 70vw;
+
+}
+.contact_phone {
+  font-size: 2rem;
+}
+/* contactここまで */
+
+/* contact 600 */
+@media screen and (min-width: 600px) {
+  .contact_box {
+    width: 60vw;
+  }
+  .contact_phone {
+    font-size: 2.4rem;
+  }
+}
+/* contact 600ここまで */
+
+/* contact 1024 */
+@media screen and (min-width: 1024px) {
+  .contact_box {
+    width: 50vw;
+  }
+  .contact_phone {
+    font-size: 2.6rem;
+  }
+}
+/* contact 1024ここまで */

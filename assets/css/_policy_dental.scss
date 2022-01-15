@@ -1,0 +1,74 @@
+/* policy */
+.policy {
+  background-color: $lightGreen;
+  background: linear-gradient($lightGreen, $lightGreen2);
+}
+.policy_title {
+  background-color: $lightGreen;
+}
+.policy_text_box {
+  width: 70vw;
+  margin: 0 auto 36px;
+
+}
+.policy_copy {
+  font-size: 2.2rem;
+  color: $darkGreen3;
+  margin: 32px 0;
+  text-align: center;
+}
+.policy_item {
+  width: 60vw;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+.policy_img_box {
+  width: 80vw;
+  margin: 0 auto;
+}
+.policy_img {
+  border-radius: 10px;
+  width: 100%;
+}
+/* polycyここまで */
+
+/* policy 600 */
+@media screen and (min-width: 600px) {
+  .policy_copy {
+    font-size: 2.4rem;
+  }
+  .policy_item {
+    width: 50vw;
+    font-size: 1.6rem;
+  }
+}
+/* policy 600ここまで */
+
+/* policy 1024 */
+@media screen and (min-width: 1024px) {
+  .policy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .policy_text_box {
+    width: 30vw;
+  }
+  .policy_copy {
+    font-size: 2.8rem;
+    margin-bottom: 48px;
+  }
+  .policy_item {
+    width: 35vw;
+    font-size: 1.8rem;
+    margin: 0 auto;
+  }
+  .policy_img_box {
+    width: 40vw;
+    max-width: 600px;
+  }
+}
+/* policy 1024ここまで */
